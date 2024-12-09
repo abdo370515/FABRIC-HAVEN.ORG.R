@@ -1,0 +1,80 @@
+[
+  {
+    "id": 1,
+    "name": " pain coffee",
+    "price": 10.5,
+    "image": "47SFA0045_2K7_01.jpg"
+  },
+  {
+    "id": 2,
+    "name": " black coffee",
+    "price": 13.4,
+    "image": "47SMA0013_3E8_01.jpg"
+  },
+  {
+    "id": 3,
+    "name": " 3KG of black coffee",
+    "price": 36.6,
+    "image": "47SMA0121_02H_01.jpg"
+  },
+  {
+    "id": 4,
+    "name": " 2KG of black coffee",
+    "price": 24.6,
+    "image": "Screenshot 2024-12-09 174502.png"
+  },
+  {
+    "id": 5,
+    "name": " matte coffee ",
+    "price": 10.3,
+    "image": "Screenshot 2024-12-09 174513.png"
+  },
+  {
+    "id": 6,
+    "name": " matte coffee ",
+    "price": 10.3,
+    "image": "Screenshot 2024-12-09 174523.png"
+  },
+  {
+    "id": 7,
+    "name": " 2KG of coffee king",
+    "price": 30,
+    "image": "Screenshot 2024-12-09 174530.png"
+  },
+  {
+    "id": 8,
+    "name": " muir wood 0.5KG",
+    "price": 20,
+    "image": "Screenshot 2024-12-09 174537.png"
+  },
+
+  {
+    "id": 9,
+    "name": " 3KG of senior coffee",
+    "price": 40,
+    "image": "Screenshot 2024-12-09 174555.png"
+  },
+
+  {
+    "id": 10,
+    "name": " muir wood 0.5KG",
+    "price": 20,
+    "image": "Screenshot 2024-12-09 174604.png"
+  },
+
+  {
+    "id": 11,
+    "name": " 3KG of senior coffee",
+    "price": 20,
+    "image": "Screenshot 2024-12-09 174611.png"
+  },
+
+  {
+    "id": 12,
+    "name": " coffee tag",
+    "price": 20,
+    "image": "Screenshot 2024-12-09 174626.png"
+  }
+
+
+]
