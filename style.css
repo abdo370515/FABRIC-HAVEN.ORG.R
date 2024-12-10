@@ -18,7 +18,6 @@ body {
     flex-wrap: wrap;
     padding: 1rem;
     background-color: #fff;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .logo h1 {
@@ -80,7 +79,7 @@ body {
 .responsive-banner {
     position: relative;
     width: 100%;
-    height: 80vh;
+    height: 60vh;
     background: url('74540952_9773424.jpg') no-repeat center center / cover;
     display: flex;
     align-items: center;
@@ -134,7 +133,7 @@ body {
 .responsive-banner_2 {
     position: relative;
     width: 100%;
-    height: 80vh;
+    height: 60vh;
     background: url('71610876_9710437.jpg') no-repeat center center / cover;
     display: flex;
     align-items: center;
@@ -526,5 +525,92 @@ body.showCart .container{
         display: flex;
         flex-direction: column;
     }
-}
+    .womens-arrival img{
+        width: 90%;
 
+    }
+}
+.womens-arrival{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 3rem;
+}
+.clothing-stylish{
+    width: 750px;
+    height: 750px;
+    background: url('women\ sneaker.avif') no-repeat center center / cover;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    position: relative;
+}
+.clothing-stylish h1 {
+    position: absolute;
+    top: 65%;
+    left: 15%;
+    font-size:xx-large;
+    color: #ffffff;
+
+}
+.clothing-stylish a {
+    position: absolute;
+    top: 77%;
+    left: 15%;
+}
+.clothing-stylish button{
+    width: 8rem;
+    height: 3rem;
+    font-size: larger;
+    color: #ffffff;
+    background-color: #000;
+    border: none;
+    border-radius: 30px;
+}
+.clothing-stylish button:hover{
+    transition-duration: 0.3s;
+    background-color: #ffffff;
+    color: #000;
+}
+.clothing-stylish_2{
+    width: 750px;
+    height: 750px;
+    background: url('Lacoste_HP_Brand_blocks_Desktop_1075x806_copy.avif') no-repeat center center / cover;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    position: relative;
+}
+.clothing-stylish_2 h1 {
+    position: absolute;
+    top: 65%;
+    left: 15%;
+    font-size:xx-large;
+    color: #ffffff;
+
+}
+.clothing-stylish_2 a {
+    position: absolute;
+    top: 77%;
+    left: 15%;
+}
+.clothing-stylish_2 button{
+    width: 8rem;
+    height: 3rem;
+    font-size: larger;
+    color: #ffffff;
+    background-color: #000;
+    border: none;
+    border-radius: 30px;
+}
+.clothing-stylish_2 button:hover{
+    transition-duration: 0.3s;
+    background-color: #ffffff;
+    color: #000;
+}
