@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Form</title>
+    
+
+    
+    
+    
+    
+    
+    
+    
+    <style>
+
+        .payment-form {
+            max-width: 400px;
+            
+            margin: 0 auto;
+            margin-top: 10cm;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+        .payment-form input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .payment-form button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .payment-form button:hover {
+            background-color: #45a049;
+        }
+
+        .pay-form{
+            align-items: center;
+            justify-content: center;
+            margin-left: 110px;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="payment-form">
+        <h2 class="pay-form">Payment Form</h2>
+        <form id="payment-form">
+            <!-- Stripe Elements Placeholder -->
+            <div id="card-element"></div>
+
+            <!-- Display error messages -->
+            <div id="card-errors" role="alert"></div>
+
+            <button type="submit">Submit Payment</button>
+        </form>
+    </div>
+
+    <!-- Stripe.js Library -->
+    <script src="https://js.stripe.com/v3/"></script>
+
+    <!-- JavaScript to handle Stripe Elements -->
+    <script>
+        // Initialize Stripe with your publishable key
+        var stripe = Stripe('your-publishable-key-here');  // Replace with your Stripe public key
+        var elements = stripe.elements();
+
+        // Create an instance of the card Element.
+        var card = elements.create('card');
+
+        // Add the card Element to the `card-element` div.
+        card.mount('#card-element');
+
+        // Handle real-time validation errors from the card Element.
+        card.on('change', function(event) {
+            var displayError = document.getElementById('card-errors');
+            if (event.error) {
+                displayError.textContent = event.error.message;
+            } else {
+                displayError.textContent = '';
+            }
+        });
+
+        // Handle form submission.
+        var form = document.getElementById('payment-form');
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            stripe.createToken(card).then(function(result) {
+                if (result.error) {
+                    // Inform the user if there was an error.
+                    var errorElement = document.getElementById('card-errors');
+                    errorElement.textContent = result.error.message;
+                } else {
+                    // Send the token to your server.
+                    stripeTokenHandler(result.token);
+                }
+            });
+        });
+
+        // Submit the token to your server.
+        function stripeTokenHandler(token) {
+            // Insert the token into the form so it gets submitted to the server
+            var hiddenInput = document.createElement('input');
+            hiddenInput.setAttribute('type', 'hidden');
+            hiddenInput.setAttribute('name', 'stripeToken');
+            hiddenInput.setAttribute('value', token.id);
+            form.appendChild(hiddenInput);
+
+            // Submit the form
+            form.submit();
+        }
+    </script>
+    <script src="app.js"></script>
+</body>
+</html>
+
